@@ -3,16 +3,16 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card" style="background-color:#F2CF1D;">
+        <div class="col-md-8 pt-5">
+            <div class="card" style="background-color:#e5ba37;">
                 <div class="card-header lead"style="color:#18298C;">{{ __('Register') }}</div>
 
-                <div class="card-body" style="color:#18298C;background-color:#04BF8A">
+                <div class="card-body" style="color:#18298C;background-color:#2c2c2e">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
-                        <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+                        <div class="form-group row" >
+                            <label for="name" class="col-md-4 col-form-label text-md-right" >{{ __('Name') }}</label>
 
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
